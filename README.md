@@ -1,6 +1,6 @@
 # clearml
 
-MLOPs using ClearML
+MLOps using ClearML
 
 1. Loading the happiness dataset
 2. Make Dirty
