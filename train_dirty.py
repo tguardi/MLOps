@@ -22,20 +22,6 @@ dataset_folder = dataset.get_local_copy()
 with open(dataset_folder + '/dirty_train.pkl', 'rb') as f:
     X_train, X_test, y_train, y_test = pickle.load(f)
 
-
-# # predictors
-# X = df[['GDP per capita',
-#              'Social support',
-#              'Freedom to make life choices', 
-#              'Generosity', 
-#              'Perceptions of corruption']]
-# # target
-# y = df['Healthy life expectancy']
-
-# # train test split
-# X_train, X_test, y_train, y_test = train_test_split(
-#     X, y, test_size=0.2, random_state=42)
-
 # train the model
 rf = RandomForestRegressor(max_depth=2, random_state=0)
 rf.fit(X_train,y_train)
@@ -50,18 +36,18 @@ y_pred = rf.predict(X_test)
 
 # Evaluating the Algorithm
 from sklearn import metrics
-print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))  
-print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))  
-print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
+print('Dirty Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))  
+print('Dirty Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))  
+print('Dirty Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
 
 # plot test results
 plt.scatter(y_pred, y_test)
-plt.title('Predicted vs Actual Results')
+plt.title('Dirty Predicted vs Actual Results')
 plt.show()
 
 # plot train results
 plt.scatter(rf.predict(X_train), y_train)
-plt.title('Training Results')
+plt.title('Dirty Training Results')
 plt.show()
 
 # show feature importances
