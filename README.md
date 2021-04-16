@@ -3,7 +3,9 @@
 MLOps using ClearML
 
 pip install clearml
+
 clearml-init
+
 {input credentials}
 
 1. Loading the happiness dataset
