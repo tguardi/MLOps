@@ -16,8 +16,6 @@ dataset = Dataset.get(dataset_project='assignment1', dataset_name='dirty_data_sp
 # get a read only version of the data
 dataset_folder = dataset.get_local_copy()
 
-# df = pd.read_csv(dataset_folder + '/dirty_data.csv')
-
 # open the dataset pickle file
 with open(dataset_folder + '/dirty_train.pkl', 'rb') as f:
     X_train, X_test, y_train, y_test = pickle.load(f)
