@@ -1,10 +1,12 @@
 # MLOps Platforms
 
+#### TPOT
 
-Investigating ClearML and Xpresso.ai with happiness dataset from kaggle
+Comparison with DataRobot modeling results
 
 
-#### MLOps using ClearML
+
+#### ClearML
 
 pip install clearml
 
